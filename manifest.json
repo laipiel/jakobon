@@ -1,0 +1,22 @@
+{
+  "name": "Jakobon",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension will translate the highlighted Japanese texts to Korean.",
+  "browser_action": {
+    "default_icon": "jacobone_icon.png",
+    "default_title": "Translate the highlighted Japanese texts to Korean."
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": [ "content_script.js" ]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ]
+}
